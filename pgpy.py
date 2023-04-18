@@ -38,6 +38,15 @@ print('-' * 15)
 print('Final pass: ', password)
 print('-' * 15)
 
+# save passwords with a message for each one
+save = input('Do you want to save the pass? y/n ')
+if save == 'y':
+    with open('pass_file.txt', 'a') as f:
+        message = input('message for pass to remind it: ')
+        f.writelines((password, ':', message,'\n'))
+else:
+    print('finish')
+
 # TODO:
 # 1. make a file and save pass
 # 2. write a message for pass to remember it
